@@ -11,28 +11,29 @@
 <script>
   $(function() {
       $("#checkJson").click(function() {
-      	var article = {articleNO:"114", 
-	               writer:"박지성",
-	               title:"안녕하세요", 
-	               content:"상품 소개 글입니다."
-	              };
+      	var article = {
+      				    articleNO : "114", 
+	                    writer    : "박지성",
+	                    title     : "안녕하세요", 
+	                    content   : "상품 소개 글입니다."
+	              	  };
   
   	$.ajax({
-  	    //type:"POST",
-        //url:"${contextPath}/boards",
-        type:"PUT",
-        url:"${contextPath}/boards/114",
-        contentType: "application/json",
-        data :JSON.stringify(article),
-      success:function (data,textStatus){
-          alert(data);
-      },
-      error:function(data,textStatus){
-        alert("에러가 발생했습니다.");ㅣ
-      },
-      complete:function(data,textStatus){
-      }
-   });  //end ajax	
+		  	    //type:"POST",
+		        //url:"${contextPath}/boards",
+		        type:"PUT",
+		        url:"${contextPath}/boards/114",
+		        contentType: "application/json",
+		        data :JSON.stringify(article),		// JSON 문자열로 변환
+			    success:function (data,textStatus){
+			        alert(data);
+			    },
+			    error:function(data,textStatus){
+			      alert("에러가 발생했습니다.");ㅣ
+			    },
+			    complete:function(data,textStatus){
+			    }
+		   });  //end ajax	
 
    });
 });

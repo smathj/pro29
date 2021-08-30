@@ -13,12 +13,13 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class ResController {
+	
 	@RequestMapping(value = "/res1")
-	@ResponseBody
+	@ResponseBody	// JSP가 아닌 텍스트나 JSON으로 결과를 전송
 	public Map<String, Object> res1() {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("id", "hong");
-		map.put("name", "ȫ�浿");
+		map.put("name", "홍길동");
 		return map;
 	}
 	

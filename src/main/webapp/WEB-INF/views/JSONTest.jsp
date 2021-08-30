@@ -12,22 +12,22 @@
   $(function() {
       $("#checkJson").click(function() {
       	var member = { id:"park", 
-  			    name:"박지성",
-  			    pwd:"1234", 
-  			    email:"park@test.com" };
+		  			   name:"박지성",
+		  			   pwd:"1234", 
+		  			   email:"park@test.com" };
   	$.ajax({
-        type:"post",
-        url:"${contextPath}/test/info",
-        contentType: "application/json",
-        data :JSON.stringify(member),
-     success:function (data,textStatus){
-     },
-     error:function(data,textStatus){
-        alert("에러가 발생했습니다.");
-     },
-     complete:function(data,textStatus){
-     }
-  });  //end ajax	
+		        type:"post",
+		        url:"${contextPath}/test/info",
+		        contentType: "application/json",
+		        data :JSON.stringify(member),		// JSON 문자열로 바꿔서보낸다
+			    success:function (data,textStatus){
+			    },
+			    error:function(data,textStatus){
+			       alert("에러가 발생했습니다.");
+			    },
+			    complete:function(data,textStatus){
+			    }
+		  });  //end ajax	
 
    });
 });
